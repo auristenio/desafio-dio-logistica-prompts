@@ -1,0 +1,67 @@
+# 🚚 Planejamento Logístico - Operação São João (Desafio DIO)
+
+Este repositório contém o planejamento de rota e distribuição de carga para o caminhão **Volkswagen Delivery 11.180** atendendo a 5 boates no interior de Pernambuco, com foco em eficiência de combustível, cumprimento de janelas de tempo e legislação de trânsito.
+
+---
+
+## 🎯 Prompt Utilizado no Desafio
+> **Instrução executada na IA para geração deste plano:**
+> "Faz uma trilha de entrega de mercadoria para 5 boates na cidade de paudalho, carpina, nazare da mata e limoeiro sendo que duas dessas boates ficam na cidade de paudalho esse percurso deve economizar o maximo de comustivel e ser o mais rapido possivel a entrega é de cerveja heineken e FYS a capacidade das boates são 500 e 700 pessoas em paudalho 800 pessoas em carpina 700 pessoas em nazare da mata e 900 pessoas em limeiro essas festa se refere a festas junina como estamos no mês de são joão. esse carregamento vai sair do CDA Recife e PDA Jaboatão, o caminhão é caminhão Delivery 11.180 70% de cerveja e 30% de FYS um total de 30.000 litros de bebidas divididas em cinco boatas paudalho com 500 e 700 pessoas, carpina 800 pessoas nazare da mata 700 pessoas e limoeiro 900 pessoas o horario de saida é de 7h da manhã. recalcula a rota inserindo uma pausa obrigatória para almoço do motorista converte os litros para quantidade exata de caixas ou barris e coloca o retorno mais rápida de limoeiro para a garagem acrescenta também o horário que o caminhão chega na garagem. Calcular a estimativa de gasto com combustível baseada no consumo do Delivery 11.180 (vazio vs. carregado). Gerar uma folha de romaneio de carga rápida para o conferente assinar no CDA e PDA."
+
+---
+
+## 📦 1. Conversão Exata de Carga por Boate
+*Proporção baseada no público total de 3.600 pessoas. Mix: 70% Heineken (Barris de 50L) e 30% FYS (Caixas de 24 latas de 350ml / 8,4L por caixa).*
+
+| Cidade (Público) | Volume Total | 🍺 Heineken (70%) | 🥤 FYS (30%) |
+| :--- | :--- | :--- | :--- |
+| **Paudalho** (500 p.) | 4.166,6 L | **58 Barris** (2.900L) | **149 Caixas** (1.268,4L) |
+| **Paudalho** (700 p.) | 5.833,3 L | **82 Barris** (4.050L) | **208 Caixas** (1.780,8L) |
+| **Carpina** (800 p.) | 6.666,6 L | **93 Barris** (4.650L) | **238 Caixas** (2.016,0L) |
+| **Nazaré da Mata** (700 p.) | 5.833,3 L | **82 Barris** (4.050L) | **208 Caixas** (1.780,8L) |
+| **Limoeiro** (900 p.) | 7.500,0 L | **105 Barris** (5.250L) | **268 Caixas** (2.251,2L) |
+| **CARGA TOTAL** | **30.000 L** | **420 Barris** | **1.071 Caixas** |
+
+---
+
+## ⏱️ 2. Cronograma de Viagem (Rota Linear Otimizada)
+*Percurso planejado no sentido Sul → Norte para esvaziamento progressivo do veículo e redução do consumo de combustível.*
+
+*   **07:00** – Saída do **PDA Jaboatão** (Início com carga parcial de FYS).
+*   **07:45** – Chegada ao **CDA Recife** (Guabiraba) para carregamento de Heineken.
+*   **08:30** – Saída do CDA Recife rumo ao interior via BR-101 / BR-408.
+*   **09:15** – **1ª Entrega:** Paudalho (500 p.) | *Descarregamento até 10:00*
+*   **10:10** – **2ª Entrega:** Paudalho (700 p.) | *Descarregamento até 10:55*
+*   **11:15** – **3ª Entrega:** Carpina (800 p.) | *Descarregamento até 12:00*
+*   **12:00** – 🍽️ **Pausa Obrigatória para Almoço (1 Hora)** em Carpina.
+*   **13:00** – Saída do almoço em direção a Nazaré da Mata via BR-408.
+*   **13:30** – **4ª Entrega:** Nazaré da Mata (700 p.) | *Descarregamento até 14:15*
+*   **15:20** – **5ª Entrega:** Limoeiro (900 p.) via PE-090 | *Descarregamento até 16:05*
+*   **16:05** – **Retorno Expresso** (Limoeiro → PE-090 → BR-408 → CDA Recife).
+*   **17:40** – 🏁 **Chegada na Garagem (CDA Recife)**, encerrando a operação.
+
+---
+
+## ⛽ 3. Indicadores de Consumo (Delivery 11.180)
+*   **Percurso Carregado / Parcial (Ida + Entregas):** ~137 km | Média: 5,8 km/L | Consumo: **23,6 Litros**
+*   **Percurso Vazio (Retorno para Garagem):** ~75 km | Média: 7,8 km/L | Consumo: **9,6 Litros**
+*   **Consumo Total:** **33,2 Litros de Diesel S10**
+*   **Custo Financeiro Estimado:** **R$ 199,20** *(Base: R$ 6,00/L)*
+
+---
+
+## 📋 4. Romaneio de Carga e Check-out
+
+### PDA JABOATÃO (Saída: 07:00)
+- **Item:** Refrigerante FYS (Caixas com 24 latas)
+- **Quantidade:** 1.071 Caixas
+- **Peso Estimado:** ~9.400 kg
+- Assinatura Conferente PDA: _______________________
+- Assinatura Motorista: ___________________________
+
+### CDA RECIFE (Saída: 08:30)
+- **Item:** Cerveja Heineken (Barris de 50L)
+- **Quantidade:** 420 Barris
+- **Peso Estimado:** ~25.000 kg
+- Assinatura Conferente CDA: _______________________
+- Assinatura Motorista: ___________________________
